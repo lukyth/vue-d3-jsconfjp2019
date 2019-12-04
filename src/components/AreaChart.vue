@@ -20,7 +20,7 @@ const margin = {top: 0, right: 0, bottom: 20, left: 60}
 
 export default {
   name: 'areachart',
-  props: ['movies'],
+  props: ['movies', 'filtered'],
   data() {
     return {
       width, height, margin,
@@ -33,6 +33,9 @@ export default {
       this.calculateScale()
       this.calculateDate()
       this.renderAxes()
+    },
+    filtered() {
+      this.calculateDate()
     }
   },
   methods: {
@@ -62,9 +65,9 @@ export default {
         .curve(d3.curveCatmullRom)
     },
     calculateDate() {
-      if (!this.movies.length) return
+      if (!this.filtered.length) return
 
-      this.arcs = this.movies.map(d => {
+      this.arcs = this.filtered.map(d => {
         return {
           id: d.id,
           path: this.area([

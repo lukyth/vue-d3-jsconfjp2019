@@ -5,6 +5,7 @@
         :y='d.y' :height='d.height' :fill=d.fill :stroke='d.fill' />
     </g>
     <g ref='xAxis' :transform='`translate(0, ${height - margin.bottom})`' />
+    <g ref='brush' />
   </svg>
 </template>
 
@@ -27,6 +28,10 @@ export default {
     }
   },
   mounted() {
+    this.brush = d3.brushX()
+      .on('brush', this.onBrush)
+      .on('end', this.onBrush)
+    d3.select(this.$refs.brush).call(this.brush)
   },
   watch: {
     movies: function() {
@@ -38,6 +43,18 @@ export default {
     }
   },
   methods: {
+    onBrush() {
+      let bounds
+
+      if (d3.event.selection) {
+        const [x1, x2] = d3.event.selection
+        bounds = [
+          this.xScale.invert(x1),
+          this.xScale.invert(x2),
+        ]
+      }
+        this.updateFilters({[this.id]: bounds})
+    },
     calculateScales: function() {
       if (!this.movies.length) return
 

@@ -61,6 +61,16 @@ export default {
   },
   methods: {
     updateFilters: function(filter) {
+      this.filters = Object.assign(this.filters, filter)
+      console.log(this.filters)
+      this.filtered = this.movies.filter(d => 
+        _.every(this.filters, (bounds, type) => {
+          if (!bounds) return true
+
+          return bounds[0] < d[type] && d[type] < bounds[1]
+        })
+      )
+      console.log(this.filtered)
     }
   }
 }
