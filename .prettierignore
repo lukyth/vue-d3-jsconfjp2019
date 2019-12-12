@@ -6,3 +6,4 @@ package-lock.json
 *.sh
 *.png
 .DS_Store
+slides

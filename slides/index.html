@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Vue &amp; D3 Workshop</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .slides h1,
+.reveal .slides h2,
+.reveal .slides h3 {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  text-transform: none;
+}
+.reveal .slides {
+  font-family: "Playfair Display";
+  line-height: 2;
+  font-size: 24px;
+}
+.reveal .slides a {
+  color: inherit;
+  border-bottom: 1px solid;
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-quicksand theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="7dedf7933ddbe0d1ce6da07946daa533"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 181px; top: 490px;" data-block-id="630bd2a86f20ddf9e9aaacc0e62f3a5d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(0, 0, 0);">
+<p>shirley wu</p>
+
+<p><span style="font-size:0.7em">(<a href="http://twitter.com/sxywu" target="_blank">@sxywu</a>)</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 345px; height: 194px; left: 309px; top: 140px;" data-block-id="f6bd495100c407d71602a18c81d52bd5"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="371" data-natural-height="209" data-lazy-loaded="" data-src="vue-d3-workshop/fa2dc278000c283af3ebf0b87296c49a.JPG"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f6a052e4f33d2ee6942c4c7d0578985c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 317px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h1>workshop</h1>
+</div></div></section><section data-id="74f6125453992db61c0681ae41d1426d"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 960px; height: 598px; left: 0px; top: 51px;" data-block-id="6b6d6148ab2631505e52c79c86af8809"><div class="sl-block-content fragment" style="z-index: 11;" data-fragment-index="0"><img style="" data-natural-width="1284" data-natural-height="800" data-lazy-loaded="" data-src="vue-d3-workshop/69236fdb050b88d0653ec706cd00dada.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="68294808088b92be0c9c54812812496d" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 246px;"><div class="sl-block-content fragment fade-out" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p><span style="color:rgb(34, 34, 34)">I'm an independent creator</span></p>
+
+<p><span style="color:rgb(34, 34, 34)">of </span><strong>data visualizations</strong><span style="color:rgb(34, 34, 34)">.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e733bdfc60607fd3b50fb802c79dab45" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 190px;"><div class="sl-block-content fragment fade-out" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="0">
+<h3><em>Hi, I'm Shirley!</em></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="11bf69025bc655a4faf8485290f5a985" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 669px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(0, 0, 0);" dir="ui">
+<p><span style="font-size:0.7em"><a href="https://sxywu.com/" target="_blank">portfolio</a> // <a href="http://www.datasketch.es/" target="_blank">data sketches</a></span></p>
+</div></div></section><section data-id="2ca898e64c672eace970def6030b5abe"><div class="sl-block" data-block-type="iframe" data-block-id="7c7e3332d149e0d30e8af8b9f5ef155d" style="min-width: 30px; min-height: 30px; width: 1012px; height: 651px; left: -26px; top: 25px;"><div class="sl-block-content fragment fade-out" style="z-index: 11;" data-fragment-index="1"><iframe webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" data-preload="true" data-lazy-loaded="" data-src="https://sxywu.com/vue-d3-example"></iframe></div></div>
+<div class="sl-block" data-block-type="text" style="width: 1012px; left: -26px; top: 1px; height: auto;" data-block-id="833ede31371dcca609b7639fee6e3fb3"><div class="sl-block-content fragment fade-out" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; background-color: rgba(255, 255, 255, 0.85);" data-fragment-index="0">
+<h2> </h2>
+
+<h2> </h2>
+
+<p> </p>
+
+<p> </p>
+
+<h2>what we're<br>
+building today</h2>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 687px; height: 662px; left: 137px; top: 20px;" data-block-id="d29a620568fad1e08ea70093bf41247a"><div class="sl-block-content fragment current-visible" style="z-index: 13;" data-fragment-index="1"><img style="" data-natural-width="988" data-natural-height="953" data-lazy-loaded="" data-src="vue-d3-workshop/5094cac7e050d34adb5bf41a6d0d58ec.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 671px; height: 395px; left: 145px; top: 153px;" data-block-id="feb70c6d00750e63b5bb7d22a787800e"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="3"><img style="" data-natural-width="671" data-natural-height="395" data-lazy-loaded="" data-src="vue-d3-workshop/67dd41a975968e7c0045a9b0d36db8ed.gif"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 1090px; height: 678px; left: -57px; top: 9px;" data-block-id="a0c01417ed78925de0e8f45a363b0d19"><div class="sl-block-content fragment current-visible" style="z-index: 10;" data-fragment-index="2"><img style="" data-natural-width="2171" data-natural-height="1350" data-lazy-loaded="" data-src="vue-d3-workshop/262b7d87b85e730121ca15f09c74699d.png"></div></div></section><section data-id="f822c511b4b3008322e0b80b00adb0be"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 81px; height: auto;" data-block-id="9605a36e472c495877322dcdaaa84ce3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>what we'll be using</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3fec326f2fcd7279128dbbbaac602f77" style="height: auto; min-width: 30px; min-height: 30px; width: 235px; left: 203px; top: 391px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p>for creating</p>
+
+<p>data visualizations for the web</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 159px; height: 161px; left: 241px; top: 204px;" data-block-id="37f79253e64a8d24cc036f81480ed732"><div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="0"><img style="" data-natural-width="190" data-natural-height="192" data-lazy-loaded="" data-src="vue-d3-workshop/0bc6ed341effb05a1e3b2900a832c5c9.JPG"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 279px; left: 486px; top: 391px;" data-block-id="d28f633005a0d463cf57d38ee63c15f9"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="1">
+<p>for building</p>
+
+<p>interactive single-page applications</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 131px; height: 161px; left: 560px; top: 204px;" data-block-id="2b1402985d7ad3749eabf7387935b584"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="1"><img style="" data-natural-width="163" data-natural-height="200" data-lazy-loaded="" data-src="vue-d3-workshop/1867e01c6a4524376f92d8eb1173cb42.JPG"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ef1f59864f86256ef720d6f6f2782c95" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 590px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-fragment-index="2">
+<p><strong>but why use them together?</strong></p>
+</div></div></section><section data-id="efb97734df7fe609c3f7fb8b973e6375"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 960px; height: 682px; left: 0px; top: 9px;" data-block-id="1b93aa1ddad53db1208507ef99cfd04f"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1127" data-natural-height="801" data-lazy-loaded="" data-src="vue-d3-workshop/3aed591c5759f9cee9cc535290dbcfdc.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 102px; height: 103px; left: 429px; top: 159px;" data-block-id="835a68eb96b8eb8ac3257f61eee6b7ec"><div class="sl-block-content fragment fade-out" style="z-index: 13;" data-fragment-index="0"><img style="" data-natural-width="190" data-natural-height="192" data-lazy-loaded="" data-src="vue-d3-workshop/0bc6ed341effb05a1e3b2900a832c5c9.JPG"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a13a1ed0716fc07f499a1d62609928b6" style="height: auto; min-width: 30px; min-height: 30px; width: 948px; left: 6px; top: 0px;"><div class="sl-block-content fragment fade-out" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; background-color: rgba(255, 255, 255, 0.85);" data-fragment-index="0">
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>the D3 library is really big</p>
+
+<p>and has a lot of functionality</p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+</div></div></section><section data-id="4744f4e5a3370137342653e3895176ef">
+<div class="sl-block" data-block-type="table" style="height: auto; width: 806px; left: 77px; top: 188px;" data-block-id="945a86427e33a20df7922336bcc6bdba"><div class="sl-block-content fragment current-visible" style="z-index: 13; text-align: center;" data-table-cols="5" data-table-border-color="rgba(0, 0, 0, 0)" data-table-rows="4" data-table-has-header="false" data-fragment-index="0"><table><tbody>
+<tr>
+<td style="border-color: rgba(0, 0, 0, 0);">raw data</td>
+<td style="width: 40px; border-color: rgba(0, 0, 0, 0);">→</td>
+<td style="border-color: rgba(0, 0, 0, 0);"><strong style="text-align:center">scales</strong></td>
+<td style="width: 40px; border-color: rgba(0, 0, 0, 0);">→</td>
+<td style="border-color: rgba(0, 0, 0, 0);">x / y<br>
+width / height<br>
+angle / radius<br>
+color</td>
+</tr>
+<tr>
+<td style="border-color: rgba(0, 0, 0, 0);">raw data</td>
+<td style="width: 40px; border-color: rgba(0, 0, 0, 0);"><strong>→</strong></td>
+<td style="border-color: rgba(0, 0, 0, 0);"><strong>forces<br>
+hierarchies</strong></td>
+<td style="width: 40px; border-color: rgba(0, 0, 0, 0);"><strong>→</strong></td>
+<td style="border-color: rgba(0, 0, 0, 0);">x / y positions</td>
+</tr>
+<tr>
+<td style="border-color: rgba(0, 0, 0, 0);">raw data</td>
+<td style="width: 40px; border-color: rgba(0, 0, 0, 0);"><strong>→</strong></td>
+<td style="border-color: rgba(0, 0, 0, 0);"><strong>geographies</strong></td>
+<td style="width: 40px; border-color: rgba(0, 0, 0, 0);"><strong>→</strong></td>
+<td style="border-color: rgba(0, 0, 0, 0);">x / y positions</td>
+</tr>
+<tr>
+<td style="border-color: rgba(0, 0, 0, 0);">raw data</td>
+<td style="border-color: rgba(0, 0, 0, 0);"><strong>→</strong></td>
+<td style="border-color: rgba(0, 0, 0, 0);"><strong>chords<br>
+shapes</strong></td>
+<td style="border-color: rgba(0, 0, 0, 0);"><strong>→</strong></td>
+<td style="border-color: rgba(0, 0, 0, 0);">svg path commands</td>
+</tr>
+</tbody></table></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="a3e72e6d8ad7831fadb77d5fadd3cc16" style="min-width: 4px; min-height: 4px; width: 789px; height: 700px; left: 154px; top: 0px;"><div class="sl-block-content fragment" data-shape-type="rect" data-shape-fill-color="rgba(255, 255, 255, 0.85)" data-shape-stretch="true" style="z-index: 12;" data-fragment-index="0"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 789 700"><rect width="789" height="700" rx="0" ry="0" class="shape-element" fill="rgba(255, 255, 255, 0.85)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 960px; height: 682px; left: 0px; top: 9px;" data-block-id="0ed467f944b0a15ddef139ec03b14157"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1127" data-natural-height="801" data-lazy-loaded="" data-src="vue-d3-workshop/3cbd92af5515194b5838cf8635aa49ad.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7053a6dc43f67ceae52a8f6e17a5cc58" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 195px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="1">
+<p><strong>brush</strong><br>
+<br>
+<strong>drag</strong><br>
+<br>
+<strong>zoom + pan</strong></p>
+</div></div></section><section data-id="c2f02300ec868e846c52c79080276393"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 960px; height: 682px; left: 0px; top: 9px;" data-block-id="6f21d79669fa6dd2c4940316e614bd0a"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1127" data-natural-height="801" data-lazy-loaded="" data-src="vue-d3-workshop/c889df2c8c97c4e37f167f4931e780c3.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 568px; left: 196px; top: 286px;" data-block-id="0bf8f4491ecf39d84edae79c4f08a28a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: center; background-color: rgba(0, 0, 0, 0);">
+<p style="text-align:center">Vue's <strong>declarative rendering</strong> and <strong>reactivity system </strong>are great replacements for</p>
+
+<p style="text-align:center">D3's enter-update-exit and dispatch system</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 84px; height: 103px; left: 438px; top: 159px;" data-block-id="203b949a74f0c335eb4bb98ef9580119"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="163" data-natural-height="200" data-lazy-loaded="" data-src="vue-d3-workshop/1867e01c6a4524376f92d8eb1173cb42.JPG"></div></div></section><section data-id="66d74a1f2278c7b9fde6ac20309ddf58"><div class="sl-block" data-block-type="text" data-block-id="4ab032e8f221682133bd633d1425e565" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>declarative rendering</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="b6bd3bb838fccfe92a12a706ea27ef40" style="min-width: 30px; min-height: 30px; width: 396px; height: 80px; left: 42px; top: 295px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" data-code-frame="none" style="z-index: 11;" data-code-wrap="true"><pre class="javascript"><code data-line-numbers="">&lt;svg&gt;
+  &lt;path v-for='d in arcs' :key='d.id' :d='d.path' :fill='d.fill' stroke='#fff' /&gt;
+&lt;/svg&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="de4db9855c50553a41d06d557862eb8a" style="min-width: 30px; min-height: 30px; width: 396px; height: 199px; left: 522px; top: 295px;"><div class="sl-block-content notranslate fragment" data-highlight-theme="zenburn" data-code-frame="none" style="z-index: 12;" data-fragment-index="0"><pre class="javascript"><code data-line-numbers="">const svg = d3.select('svg')
+
+const path = svg.selectAll('path')
+  .data(arcs, d =&gt; d.id);
+
+path.exit().remove()
+
+path.enter().append()
+  .attr('stroke', '#fff')
+  .merge(path)
+  .attr('d', d =&gt; d.path)
+  .attr('fill', d =&gt; d.fill)
+  </code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 102px; height: 103px; left: 669px; top: 177px;" data-block-id="b367b4665ad8de51ea964850607f957d"><div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="0"><img style="" data-natural-width="190" data-natural-height="192" data-lazy-loaded="" data-src="vue-d3-workshop/0bc6ed341effb05a1e3b2900a832c5c9.JPG"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 84px; height: 103px; left: 198px; top: 177px;" data-block-id="c969f15413df930fe745b758961eab14"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="163" data-natural-height="200" data-lazy-loaded="" data-src="vue-d3-workshop/1867e01c6a4524376f92d8eb1173cb42.JPG"></div></div></section><section data-id="373106f278deba0105fed98b13513273"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;" data-block-id="e2820c43378f9296e1bcaf75ef913f16"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>reactivity system</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="2cf9fd0a0a4925741813f9b538cadf8a" style="min-width: 30px; min-height: 30px; width: 438px; height: 336px; left: 63px; top: 171px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" data-code-frame="none" style="z-index: 11;" data-code-wrap="true"><pre class="javascript"><code data-line-numbers="1-21|10-16|17-19|2-4" data-fragment-index="0">&lt;template&gt;
+  &lt;svg :width='width' :height='height'&gt;
+    &lt;path v-for='d in arcs' :d='d.path' /&gt;
+  &lt;/svg&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'areachart',
+  data() {
+    return {
+      width: 1000, height: 300,
+      movies: [],
+      arcs: [],
+    }
+  },
+  watch: {
+    movies() { ... }
+  },
+}
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="4a19d8a4bf8332a4556fa4d4373c1f8d" style="height: auto; min-width: 30px; min-height: 30px; width: 383px; left: 537px; top: 339px;"><div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p style="text-align:left"><span style="font-size:0.9em">tells Vue to track changes for <span style="text-align:left">datum</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 383px; left: 537px; top: 420px;" data-block-id="440380434a2d6bbad8d2408a65555830"><div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="1">
+<p style="text-align:left"><span style="font-size:0.9em">when datum changes, do something</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 383px; left: 537px; top: 178px;" data-block-id="df7427056052e3fe7628192379405220"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="2">
+<p style="text-align:left"><span style="font-size:0.9em"><em>v-bind:</em> (or <em>:</em>) tells Vue to automatically update if datum changes</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 84px; height: 103px; left: 240px; top: 539px;" data-block-id="4880e5c17e3e63c617fd78c63db42657"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="163" data-natural-height="200" data-lazy-loaded="" data-src="vue-d3-workshop/1867e01c6a4524376f92d8eb1173cb42.JPG"></div></div></section><section data-id="7f9fac50634f76465c12594c17d342d3"><div class="sl-block" data-block-type="text" style="height: auto; width: 457px; left: 252px; top: 431px;" data-block-id="f4a35efbc9fe9fff4634c8afdfb56d51"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+<p>1. translate raw data into screen space</p>
+
+<ul>
+	<li><span style="color:rgb(34, 34, 34)">release date → x-position</span></li>
+	<li><span style="color:rgb(34, 34, 34)">box office → y-position</span></li>
+	<li><span style="color:rgb(34, 34, 34)">metascore → color</span></li>
+</ul>
+
+<p><span style="color:rgb(34, 34, 34)">2. calculate svg paths for drawing shapes</span></p>
+
+<p><span style="color:rgb(34, 34, 34)">3. render to DOM</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 834px; height: 256px; left: 63px; top: 152px; min-width: 4px; min-height: 4px;" data-block-id="2325c0ef6fdb0bd1476a453599672cdc"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2052" data-natural-height="630" data-lazy-loaded="" data-src="vue-d3-workshop/f9d944c1b16b1630c54fb270f19b2322.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 81px;" data-block-id="0743b167bcee8221911cca24c84b4cd7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>our custom visualization</h2>
+</div></div></section><section data-id="a45d506eec91333ffa6939aba65a5d17"><div class="sl-block" data-block-type="text" data-block-id="76ca87e17f6d2e429cd96c5dbf4b1fee" style="height: auto; min-width: 30px; min-height: 30px; width: 442px; left: 80px; top: 233px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+<p>1. translate raw data into screen space</p>
+
+<ul>
+	<li><span style="color:rgb(34, 34, 34)">release date → x-position</span></li>
+	<li><span style="color:rgb(34, 34, 34)">box office → y-position</span></li>
+	<li><span style="color:rgb(34, 34, 34)">metascore → color</span></li>
+</ul>
+
+<p><span style="color:rgb(34, 34, 34)">2. calculate svg paths for drawing shapes</span></p>
+
+<p><span style="color:rgb(34, 34, 34)">3. render to DOM</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="3e39c32c90db1e4246b8f50afb22f2b2" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>our custom visualization</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 130px; left: 640px; top: 233px;" data-block-id="3337f5eb840473a0b8a9d95a34391192"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p style="text-align:left">1. d3 scales</p>
+
+<p style="text-align:left">2. d3 shapes</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 102px; height: 103px; left: 528px; top: 233px;" data-block-id="593291b27cb2bc96192beefda0b5518f"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="0"><img style="" data-natural-width="190" data-natural-height="192" data-lazy-loaded="" data-src="vue-d3-workshop/0bc6ed341effb05a1e3b2900a832c5c9.JPG"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 84px; height: 103px; left: 537px; top: 376px;" data-block-id="d8576640b13283c130dc651fa6f96d4b"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="1"><img style="" data-natural-width="163" data-natural-height="200" data-lazy-loaded="" data-src="vue-d3-workshop/1867e01c6a4524376f92d8eb1173cb42.JPG"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 273px; left: 640px; top: 412px;" data-block-id="be96503df77008e582672bf9def9ca63"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-fragment-index="1">
+<p style="text-align:left">3. declarative rendering</p>
+</div></div></section><section data-id="f05324b899962d68d67228469401ce07"><div class="sl-block" data-block-type="text" data-block-id="97db7f24131d04d30a2859525cc8d8db" style="height: auto; min-width: 30px; min-height: 30px; width: 130px; left: 450px; top: 82px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>scales</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 69px; height: 70px; left: 381px; top: 70px;" data-block-id="6fb65228c9de574fc38900ffda2702a2"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="190" data-natural-height="192" data-lazy-loaded="" data-src="vue-d3-workshop/0bc6ed341effb05a1e3b2900a832c5c9.JPG"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f5e3f0dc8394f2cead010e314b8d5fa8" style="height: auto; min-width: 30px; min-height: 30px; width: 742px; left: 109px; top: 153px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>map from raw data (domain)</p>
+
+<p>to display (range)</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="54b28d02c7d80edf0e2f8c3ede8fb391" style="min-width: 30px; min-height: 30px; width: 470px; height: 300px; left: 68px; top: 270px;"><div class="sl-block-content notranslate fragment" data-highlight-theme="zenburn" data-code-frame="none" style="z-index: 14;" data-fragment-index="0"><pre class="javascript"><code data-line-numbers="1-19|9-10|11|12|13" data-fragment-index="1">const width = 800
+const height = 600
+const data = [
+  {date: new Date('01-01-2015'), boxOffice: 2349800},
+  {date: new Date('01-01-2017'), boxOffice: 32487652},
+  ...
+]
+
+const min = d3.min(data, d =&gt; d.date)
+const max = d3.max(data, d =&gt; d.date)
+const xScale = d3.scaleTime()
+  .domain([min, max])
+  .range([0, width])
+
+// d3.extent returns [min, max]
+const extent = d3.extent(data, d =&gt; d.boxOffice)
+const yScale = d3.scaleLinear()
+  .domain(extent)
+  .range([height, 0])</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a6e50f517939a2004da40d58e84f731f" style="height: auto; min-width: 30px; min-height: 30px; width: 346px; left: 547px; top: 358px;"><div class="sl-block-style" style="z-index: 15; transform: rotate(360deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<ol>
+	<li class="fragment" data-fragment-index="1" style="text-align:left"><span style="font-size:0.9em">get min/max of <strong>date</strong></span></li>
+	<li class="fragment" data-fragment-index="2" style="text-align:left"><span style="font-size:0.9em">initialize time scale</span></li>
+	<li class="fragment" data-fragment-index="3" style="text-align:left"><span style="font-size:0.9em">pass <strong>date</strong> min/max to <em>domain</em></span></li>
+	<li class="fragment" data-fragment-index="4" style="text-align:left"><span style="font-size:0.9em">map to min/max <strong>width</strong> in <em>range</em></span></li>
+</ol>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b31efb4b3258a8975210866c90901ae9" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 599px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p><span style="font-size:0.7em"><a href="https://github.com/d3/d3-scale" target="_blank">documentation</a></span></p>
+</div></div></section><section data-id="d9572939c8439382688216f34eeb54a8"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 152px; left: 439px; top: 81px;" data-block-id="2a1f0ecdc2b69596a773faaa9766b318"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>shapes</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 69px; height: 70px; left: 370px; top: 70px;" data-block-id="c3922e66673c063dba3abf89953080c5"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="190" data-natural-height="192" data-lazy-loaded="" data-src="vue-d3-workshop/0bc6ed341effb05a1e3b2900a832c5c9.JPG"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 599px;" data-block-id="34f0269b5ed1f9c31eb76489b24b7f38"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.7em"><a href="https://github.com/d3/d3-shape#areas" target="_blank">documentation</a></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="86516d3ad64d0abc22b455cea5bd24bb" style="min-width: 30px; min-height: 30px; width: 469px; height: 193px; left: 80px; top: 280px;"><div class="sl-block-content notranslate fragment" data-highlight-theme="zenburn" data-code-frame="none" style="z-index: 15;" data-fragment-index="0"><pre class="javascript"><code data-line-numbers="1-12|7|8-9|10|12" data-fragment-index="1">const data = [
+  {date: new Date('01-01-2015'), boxOffice: 2349800},
+  {date: new Date('01-01-2017'), boxOffice: 32487652},
+  …
+]
+
+const area = d3.area()
+  .x(d =&gt; xScale(d.date))
+  .y1(d =&gt; yScale(d.boxOffice))
+  .y0(yScale(0))
+
+area(data)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 392px; left: 284px; top: 155px;" data-block-id="4a53daddae64ca76cca04c05cc1e8680"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>generates SVG or Canvas path commands to draw shape</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 310px; left: 570px; top: 419px;" data-block-id="beb19f1ca029d29b60a78fe347c52aed"><div class="sl-block-style" style="z-index: 11; transform: rotate(360deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ol>
+	<li class="fragment" data-fragment-index="1" style="font-size:21.6px; text-align:left">initialize</li>
+	<li class="fragment" data-fragment-index="2" style="font-size:21.6px">specify x/y accessor</li>
+	<li class="fragment" data-fragment-index="3" style="font-size:21.6px">specify baseline</li>
+	<li class="fragment" data-fragment-index="4" style="font-size:21.6px">generate SVG path string</li>
+</ol>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="81de5f0c6d57fcec3f34043c11565803" style="height: auto; min-width: 30px; min-height: 30px; width: 310px; left: 570px; top: 280px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;" data-fragment-index="0">
+<p style="text-align:left"><span style="font-size:0.9em"><strong>d3.area()</strong></span></p>
+
+<p style="text-align:left"><span style="font-size:0.9em">pass in array of points, draws line through points and fills area underneath</span></p>
+</div></div></section><section data-id="82b144cfe148d45c221673f16b92dd3d"><div class="sl-block" data-block-type="text" data-block-id="7cbdc3f6f2c812934fa6d0fd88ba10d7" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>exercise time!</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="45ace609ae920a7f9abe22155ca2cdd9" style="height: auto; min-width: 30px; min-height: 30px; width: 520px; left: 220px; top: 375px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Set up <strong>AreaChart.vue</strong></p>
+
+<ol>
+	<li>in<strong> App.vue</strong>, pass <em>movies</em> into AreaChart.vue</li>
+	<li>in <strong>AreaChart.vue</strong>, receive <em>movies</em> as props</li>
+	<li>Watch for changes on <em>movies</em>
+</li>
+</ol>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 280px; height: 158px; left: 340px; top: 157px;" data-block-id="0ac6b5f141e56474bb8f230aadef65a1"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="371" data-natural-height="209" data-lazy-loaded="" data-src="vue-d3-workshop/fa2dc278000c283af3ebf0b87296c49a.JPG"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 599px;" data-block-id="6d4a4cd9ba0f919486320c2a9bf1126e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:16.8px"><a href="https://codesandbox.io/s/github/sxywu/vue-d3-example/tree/workshop" target="_blank">code sandbox</a> // <a href="https://github.com/sxywu/vue-d3-example/tree/workshop" target="_blank">github repo</a></span></p>
+</div></div></section><section data-id="599bc6f002eab9bc9da609238b4ee475">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 650px; left: 155px; top: 318px;" data-block-id="b2dede4560846201421342a1cc6c12c1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:0.9em"><span style="color:rgb(34, 34, 34)">release date → </span><span style="color:rgb(34, 34, 34)"><strong>scaleTime</strong> </span><span style="color:rgb(34, 34, 34)">→</span><span style="color:rgb(34, 34, 34)"> </span><span style="color:rgb(34, 34, 34)">x-position</span><br>
+<span style="color:rgb(34, 34, 34)">box office → </span><span style="color:rgb(34, 34, 34)"><strong>scaleLinear</strong> </span><span style="color:rgb(34, 34, 34)">→</span><span style="color:rgb(34, 34, 34)"> </span><span style="color:rgb(34, 34, 34)">y-position</span><br>
+<span style="color:rgb(34, 34, 34)">metascore → </span><span style="color:rgb(34, 34, 34)"><strong>scaleSequential</strong> </span><span style="color:rgb(34, 34, 34)">→</span><span style="color:rgb(34, 34, 34)"> </span><span style="color:rgb(34, 34, 34)">color</span></span></p>
+
+<p> </p>
+
+<p><span>use d3.area() to create an array of objects</span></p>
+
+<p><span>each object has </span><em>id</em><span>, </span><em>path</em><span>, </span><em>fill</em></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;" data-block-id="9f0ad690b3ccda3b445e8b05601e0975"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>exercise time!</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 280px; height: 158px; left: 340px; top: 157px;" data-block-id="fbeef9b69521a267483490b50df557ee"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="371" data-natural-height="209" data-lazy-loaded="" data-src="vue-d3-workshop/fa2dc278000c283af3ebf0b87296c49a.JPG"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 599px;" data-block-id="b1481279fd8b6854551a0c171c2cf210"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:16.8px"><a href="https://codesandbox.io/s/github/sxywu/vue-d3-example/tree/workshop" target="_blank">code sandbox</a> // <a href="https://github.com/sxywu/vue-d3-example/tree/workshop" target="_blank">github repo</a></span></p>
+</div></div></section><section data-id="87de883a7a99c609b7ef3b0e56d8144f">
+
+<div class="sl-block" data-block-type="text" data-block-id="7197131495176b4a8d749e95e73f409a" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>Draw SVG paths with Vue</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;" data-block-id="10ea74661948c0f1c92262a3a70bc81f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>exercise time!</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 280px; height: 158px; left: 340px; top: 157px;" data-block-id="9486cd59bbd40973259843317a4ec1fe"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="371" data-natural-height="209" data-lazy-loaded="" data-src="vue-d3-workshop/fa2dc278000c283af3ebf0b87296c49a.JPG"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 599px;" data-block-id="4c7558cffc53999c500e05d7b2298b72"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:16.8px"><a href="https://codesandbox.io/s/github/sxywu/vue-d3-example/tree/workshop" target="_blank">code sandbox</a> // <a href="https://github.com/sxywu/vue-d3-example/tree/workshop" target="_blank">github repo</a></span></p>
+</div></div></section><section data-id="49480e698e727608e0dae456c2551c67">
+
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 528px; height: 424px; left: 216px; top: 136px;" data-block-id="73061894aa45a5fed2e7abc66392ac70"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="528" data-natural-height="424" data-lazy-loaded="" data-src="vue-d3-workshop/3ec8e8413ea8f4767508aac7acf134d1.JPG"></div></div></section><section data-id="10876dbb8ba19b697e956a80bc0a5782"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 181px; top: 81px;" data-block-id="a68dedc6eff025ebbbf4c82a1b6ff4cc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<h2>Interactions</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 671px; height: 395px; left: 146px; top: 153px;" data-block-id="0c9caedab0e9f5b66dfd438f11a9a7eb"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="671" data-natural-height="395" data-lazy-loaded="" data-src="vue-d3-workshop/67dd41a975968e7c0045a9b0d36db8ed.gif"></div></div></section><section data-id="fafc1d69c79ce44dab798141e6fa679d">
+<div class="sl-block" data-block-type="text" data-block-id="27c2b958ea80367d7fc99a66847fb597" style="height: auto; min-width: 30px; min-height: 30px; width: 405px; left: 278px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="text-align: left;">Set up D3 brush in <strong>Histogram.vue</strong></p>
+
+<ol>
+	<li style="text-align: left;">Create empty <em>&lt;g&gt;</em> element</li>
+	<li style="text-align: left;">Initialize <em>d3.brushX() </em>with bounds</li>
+	<li style="text-align: left;">Pass <em>&lt;g&gt;</em> element to D3 brush</li>
+</ol>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;" data-block-id="a083ca5e52818e47c3e28feacc5220dc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>exercise time!</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 280px; height: 158px; left: 340px; top: 157px;" data-block-id="7c62db5e50bb96daae096b473bc4c974"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="371" data-natural-height="209" data-lazy-loaded="" data-src="vue-d3-workshop/fa2dc278000c283af3ebf0b87296c49a.JPG"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 599px;" data-block-id="763e8c1744bd16b70c1e3f1097d9c512"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:16.8px"><a href="https://codesandbox.io/s/github/sxywu/vue-d3-example/tree/workshop" target="_blank">code sandbox</a> // <a href="https://github.com/sxywu/vue-d3-example/tree/workshop" target="_blank">github repo</a></span></p>
+</div></div></section><section data-id="9cf644b53f8a5431afadeaeb7534241e">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 419px; left: 271px; top: 321px;" data-block-id="1c377d288a6790686b53f065c8f7dc0e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left">In <strong>Histogram.vue</strong></p>
+
+<ol>
+	<li><span>On brush, calculate bounds              </span></li>
+</ol>
+
+<p style="text-align:left">In <strong>App.vue</strong></p>
+
+<ol>
+	<li>Filter for movies within bounds</li>
+	<li>Set filtered movies in <em>data()</em>
+</li>
+	<li>Update AreaChart.vue and Histogram.vue with filtered movies</li>
+</ol>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;" data-block-id="428b9cd42a9bddd3af48fd3cbdbcc14f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<h2>exercise time!</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 280px; height: 158px; left: 340px; top: 157px;" data-block-id="a562ce1004392226cc8c21552b08aaf4"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="371" data-natural-height="209" data-lazy-loaded="" data-src="vue-d3-workshop/fa2dc278000c283af3ebf0b87296c49a.JPG"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 599px;" data-block-id="bf07df50f072ab0e6d78f1fbe041f3f0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;">
+<p><span style="font-size:16.8px"><a href="https://codesandbox.io/s/github/sxywu/vue-d3-example/tree/workshop" target="_blank">code sandbox</a> // <a href="https://github.com/sxywu/vue-d3-example/tree/workshop" target="_blank">github repo</a></span></p>
+</div></div></section><section data-id="89c938410c2e668e709f70a1403a7ca9"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 672px; height: 571px; left: 144px; top: 65px;" data-block-id="6edb6b08cdcfab10e1632c97160aa82d"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="672" data-natural-height="571" data-lazy-loaded="" data-src="vue-d3-workshop/10dabfbc248dc2ff961168fa95d44386.JPG"></div></div></section><section data-id="5457ceed1b5534e449e8e4aecdbc410b"><div class="sl-block" data-block-type="text" data-block-id="f366e944352a84025f4ac2b232a10d3c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 129px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="color:rgb(34, 34, 34); font-size:1.6em"> </p>
+
+<p style="color:rgb(34, 34, 34)"><a href="https://frontendmasters.com/courses/d3-v4/" target="_blank">introduction to d3</a></p>
+
+<p style="color:rgb(34, 34, 34)"> </p>
+
+<p style="color:rgb(34, 34, 34)">✨</p>
+
+<p style="color:rgb(34, 34, 34)"> </p>
+
+<p style="color:rgb(34, 34, 34)"><a href="https://frontendmasters.com/workshops/react-dataviz/" target="_blank">data visualization for<br>
+react developers</a></p>
+
+<p style="color:rgb(34, 34, 34)"> </p>
+
+<p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">✨</span></p>
+
+<p style="color:rgb(34, 34, 34)"><br>
+<a href="https://frontendmasters.com/workshops/building-dataviz/" target="_blank">building custom<br>
+data visualizations</a></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;" data-block-id="a5a131e8c1567aaf8e654149484af7bc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>more workshops</h2>
+</div></div></section><section data-id="10d950ff07e0d3856f9bb92055a5881a"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 507px; height: 350px; left: 227px; top: 105px;" data-block-id="d31e2607bc16cf62c0a68539d5a8f486"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1000" data-natural-height="691" data-lazy-loaded="" data-src="vue-d3-workshop/8690f55dd009a5e228c5e1bcdb84773d.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 490px;" data-block-id="880c853733cc3c13afbbb01c8e5f3aa2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>thank you!</h2>
+
+<p><span style="font-size:0.7em"><a href="http://twitter.com/sxywu" target="_blank">@sxywu</a></span></p>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1660014,"slug":"vue-d3-workshop","title":"Vue \u0026 D3 Workshop","description":"","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/0c3e5a372399f01b50d2217662d9fa8a/thumb.jpg?1575121143","view_count":0,"user":{"id":415741,"username":"shirleywu","name":"Shirley Wu","description":null,"thumbnail_url":"//graph.facebook.com/10206725866199094/picture","paid":true,"pro":true,"lite":false,"team_id":null,"settings":{"id":254359,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"fade","transition":"fade","theme_id":null,"theme_font":"quicksand","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":23,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":3,"data_updated_at":1575121151859,"font_typekit":"","font_google":"Playfair+Display:400,400i,700,700i","time_limit":null,"upsizing_enabled":true,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "fade",
+				backgroundTransition: "fade",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js' },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/reveal-plugins/zoom/zoom.js', async: true }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
