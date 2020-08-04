@@ -11,7 +11,7 @@
   "dependencies": {
     "d3": "^5.7.0",
     "gsap": "^2.0.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "vue": "^2.5.17"
   },
   "devDependencies": {
