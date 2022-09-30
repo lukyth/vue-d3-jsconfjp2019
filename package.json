@@ -9,7 +9,7 @@
     "format": "prettier --write '**'"
   },
   "dependencies": {
-    "d3": "^5.7.0",
+    "d3": "^7.6.1",
     "gsap": "^2.0.2",
     "lodash": "^4.17.11",
     "vue": "^2.5.17"
